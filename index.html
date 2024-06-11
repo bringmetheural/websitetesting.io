@@ -1,75 +1,63 @@
 <!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>testing</title>
-        <script src="js/script.js">
-        </script>
-        <link rel="stylesheet" href="css/styles.css"/>
-    </head>
-    <body>
-        <header>
-            <div class="vis_hdr"></div>
-            <div class="trp_hdr">
-                <a href="index.html"><img class="logo" src="imgs/logo.svg" alt="X"></a>
-                <div class="partlinks_wrapper partlinks_pos">
-                   <div class="partlink"><a href="#main_anchor">Главная</a></div>
-                   <div class="partlink"><a href="#aboutus_anchor">О нас</a></div>
-                   <div class="partlink"><a href="#service_part">Услуги</a></div>
-                   <div class="partlink"><a href="#feedback_part">Отзывы</a></div>
-                   <div class="partlink"><a href="#contacts_anchor">Контакты</a></div>
-                </div> 
-            </div>
-        </header>
-        <div id="main_anchor" class="main_part">
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Обслуживание и монтаж приборов учета</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html"><img class="logo" src="imgs/logo.svg" alt="Logo"></a>
+            <nav class="navigation">
+                <a href="#main_anchor">Главная</a>
+                <a href="#aboutus_anchor">О нас</a>
+                <a href="#service_part">Услуги</a>
+                <a href="#feedback_part">Отзывы</a>
+                <a href="#contacts_anchor">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="main_anchor" class="main-section">
             <h1>Обслуживание и монтаж приборов учета</h1>
-            <div class="underline">
-                <div class="underline_button"><a href="#contacs_anchor"><p>Контакты</p></a></div>
-            </div>
-        </div>
-        <div id="aboutus_anchor"></div>
-        <div class="leftBlueBorder_cls aboutus_part">
-            <div class="aboutus_header">
-                <h1>О нас</h1>
-                <svg><rect /></svg>
-            </div>
+            <div class="underline-button"><a href="#contacts_anchor"><p>Контакты</p></a></div>
+        </section>
+        <section id="aboutus_anchor" class="section aboutus-section">
+            <h2>О нас</h2>
             <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine. Truly a wonder of nature this urban predator — Tommy the cat had many a story to tell. But it was a rare occasion such as this that he did.</p>
-        </div>
-        <div id="service_anchor"></div>
-        <div id="service_part">
-            <div id="service_header">
-                <h1>Предоставляемые услуги</h1>
-                <svg><rect /></svg>
-            </div>
-            <div id="prices">
-                <div id="price_windows_grid">
-                    <div onclick="interactPoverkaTable()" id="poverka_window" class="price_window">
-                        <p id="poverka_cover" class="blueCoverEffect">Поверка</p>
-                    </div>
-                    <div onclick="interactTechservTable()" id="techserv_window" class="price_window">
-                        <p id="techserv_cover" class="blueCoverEffect">Техническое обслуживание</p>
-                    </div>
-                    <div onclick="interactPokazaniyaTable()" id="pokazaniya_window" class="price_window">
-                        <p id="pokazaniya_cover" class="blueCoverEffect">Сбор и сдача показаний</p>
-                    </div>
-                    <div onclick="interactIns_deinstTable()" id="ins_deinst_window" class="price_window">
-                        <p id="ins_deinst_cover" class="blueCoverEffect">Монтаж/демонтаж</p>
-                    </div>
-                    <div onclick="interactSFWTable()" id="sFW_window" class="price_window">
-                        <p id="sFW_cover" class="blueCoverEffect">Пуско-наладочные работы</p>
-                    </div>
-                    <div onclick="interactPWTable()" id="pW_window" class="price_window">
-                        <p id="pW_cover" class="blueCoverEffect">Проектные работы</p>
-                    </div>
-                    <div onclick="interactCDTable()" id="cD_window" class="price_window">
-                        <p id="cD_cover" class="blueCoverEffect">Работы по настройке приборов</p>
-                    </div>
-                    <div onclick="interactPITable()" id="pI_window" class="price_window">
-                        <p id="pI_cover" class="blueCoverEffect">Услуги по установк ПО "Искра"</p>
-                    </div>
+        </section>
+        <section id="service_part" class="section">
+            <h2>Предоставляемые услуги</h2>
+            <div class="price-windows-grid">
+                <div id="poverka_window" class="price-window" data-table="poverka_table_holder">
+                    <p class="blue-cover-effect">Поверка</p>
+                </div>
+                <div id="techserv_window" class="price-window" data-table="techserv_table_holder">
+                    <p class="blue-cover-effect">Техническое обслуживание</p>
+                </div>
+                <div id="pokazaniya_window" class="price-window" data-table="pokazaniya_table_holder">
+                    <p class="blue-cover-effect">Сбор и сдача показаний</p>
+                </div>
+                <div id="ins_deinst_window" class="price-window" data-table="ins_deinst_table_holder">
+                    <p class="blue-cover-effect">Монтаж/демонтаж</p>
+                </div>
+                <div id="sFW_window" class="price-window" data-table="sFW_table_holder">
+                    <p class="blue-cover-effect">Пуско-наладочные работы</p>
+                </div>
+                <div id="pW_window" class="price-window" data-table="pW_table_holder">
+                    <p class="blue-cover-effect">Проектные работы</p>
+                </div>
+                <div id="cD_window" class="price-window" data-table="cD_table_holder">
+                    <p class="blue-cover-effect">Работы по настройке приборов</p>
+                </div>
+                <div id="pI_window" class="price-window" data-table="pI_table_holder">
+                    <p class="blue-cover-effect">Услуги по установке ПО "Искра"</p>
                 </div>
             </div>
-            <div id="poverka_table_holder" class="table_holder">
+            <div id="poverka_table_holder" class="table-holder">
                 <table>
                     <tr>
                         <th>Вычислитель ТЭКОН-19</th>
@@ -100,7 +88,7 @@
                         <td>3740</td>
                     </tr>
                     <tr>
-                        <th>Датчики давления ДИ,ДД с ВПИ до 1,0 кПа</th>
+                        <th>Датчики давления ДИ, ДД с ВПИ до 1,0 кПа</th>
                         <td>8700</td>
                     </tr>
                     <tr>
@@ -162,17 +150,18 @@
                     <tr>
                         <th>Счетчики воды крыльчатые и турбинные. Dy 100 мм расход до 200 м3/ч</th>
                         <td>От 10140</td>
+                    </tr>
                 </table>
             </div>
-            <div id="techserv_table_holder" class="table_holder">
+            <div id="techserv_table_holder" class="table-holder">
                 <table>
                     <tr>
-                        <th>Тех-обследование УКУТ с каналом связи (2-х,3-х,4-х трубная система)</th>
+                        <th>Тех-обследование УКУТ с каналом связи (2-х, 3-х, 4-х трубная система)</th>
                         <td>От 2100</td>
                     </tr>
                 </table>
             </div>
-            <div id="pokazaniya_table_holder" class="table_holder">
+            <div id="pokazaniya_table_holder" class="table-holder">
                 <table>
                     <tr>
                         <th>Сдача показаний в ЭСО</th>
@@ -184,7 +173,7 @@
                     </tr>
                 </table>
             </div>
-            <div id="ins_deinst_table_holder" class="table_holder">
+            <div id="ins_deinst_table_holder" class="table-holder">
                 <table>
                     <tr>
                         <th>Монтаж/демонтаж ТЭКОН</th>
@@ -195,7 +184,7 @@
                         <td>500</td>
                     </tr>
                     <tr>
-                        <th>Монтаж/демонтаж датчиков перепада давления </th>
+                        <th>Монтаж/демонтаж датчиков перепада давления</th>
                         <td>950</td>
                     </tr>
                     <tr>
@@ -208,7 +197,7 @@
                     </tr>
                 </table>
             </div>
-            <div id="sFW_table_holder" class="table_holder">
+            <div id="sFW_table_holder" class="table-holder">
                 <table>
                     <tr>
                         <th>Пуско-наладочные работы узла учета</th>
@@ -220,7 +209,7 @@
                     </tr>
                 </table>
             </div>
-            <div id="pW_table_holder" class="table_holder">
+            <div id="pW_table_holder" class="table-holder">
                 <table>
                     <tr>
                         <th>Предпроектное обследование</th>
@@ -236,7 +225,7 @@
                     </tr>
                 </table>
             </div>
-            <div id="cD_table_holder" class="table_holder">
+            <div id="cD_table_holder" class="table-holder">
                 <table>
                     <tr>
                         <th>Программирование УСП-178, К-104-01</th>
@@ -252,7 +241,7 @@
                     </tr>
                 </table>
             </div>
-            <div id="pI_table_holder" class="table_holder">
+            <div id="pI_table_holder" class="table-holder">
                 <table>
                     <tr>
                         <th>Установка комплекса на компьютер заказчика</th>
@@ -263,60 +252,59 @@
                         <td>2400</td>
                     </tr>
                     <tr>
-                        <th>Составление стандартного бланка  для программы Минитехнолог</th>
+                        <th>Составление стандартного бланка для программы Минитехнолог</th>
                         <td>2000</td>
                     </tr>
                     <tr>
-                        <th>Составление стандартного бланка  для программы Технолог</th>
+                        <th>Составление стандартного бланка для программы Технолог</th>
                         <td>4500</td>
                     </tr>
                 </table>
             </div>
-        </div>
-        <div id="feedback_part" class="feedback_part">
-            <div class="feedback_header">
-                <h1>Отзывы</h1>
-            </div>
+        </section>
+        <section id="feedback_part" class="section feedback-section">
+            <h2>Отзывы</h2>
             <div class="scrollmenu">
                 <a href="#">
                     <p>документ не найден</p>
-                    <img src="docs/example.jpg"/>
+                    <img src="docs/example.jpg" alt="Example">
                 </a>
                 <a href="#">
                     <p>документ не найден</p>
-                    <img src=""/>
+                    <img src="" alt="Example">
                 </a>
                 <a href="#">
                     <p>документ не найден</p>
-                    <img src=""/>
+                    <img src="" alt="Example">
                 </a>
                 <a href="#">
                     <p>документ не найден</p>
-                    <img src=""/>
+                    <img src="" alt="Example">
                 </a>
                 <a href="#">
                     <p>документ не найден</p>
-                    <img src=""/>
+                    <img src="" alt="Example">
                 </a>
                 <a href="#">
                     <p>документ не найден</p>
-                    <img src=""/>
+                    <img src="" alt="Example">
                 </a>
             </div>
-        </div>
-        <div id="contacts_anchor" class="contacts_part leftBlueBorder_cls">
-            <div id="contacs_anchor"></div>
-            <div class="contacts_header">
-                <h1>Контакты</h1>
-                <svg><rect /></svg>
-            </div>
+        </section>
+        <section id="contacts_anchor" class="section contacts-section">
+            <h2>Контакты</h2>
             <p>Эл. почта: oooehtalon@rambler.ru</p>
             <p>Тел: 89086314867</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <a href="#main_anchor"><p>наверх</p></a>
+            <div class="footer-info">
+                <img src="imgs/logo2.svg" alt="Логотип компании">
+                <p>© Copyright 2024 ООО "ЭТАЛОН"</p>
+            </div>
         </div>
-        <div id="bottom_button"><a href="#main_anchor"><p>наверх</p></a></div>
-        <div on class="bottom_part">
-            <div id="blueline"><img src="imgs/logo2.svg"/></div>
-            <p id="rights">© Copyright 2024 ООО "ЭТАЛОН"</p>
-        </div>
-    </body>
+    </footer>
+</body>
 </html>
